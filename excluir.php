@@ -4,6 +4,7 @@ include 'conexao.php';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
+    //Comando para o SQL excluir o comunicado com o ID
     $stmt = mysqli_prepare($conexao, "DELETE FROM comunicados WHERE id = ?");
     mysqli_stmt_bind_param($stmt, "i", $id);
 

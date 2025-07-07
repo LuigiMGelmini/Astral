@@ -1,8 +1,10 @@
 <?php
 include 'conexao.php';
 
+//Pega o ID presente na URL
 $id = $_GET['id'];
 
+//Busca os dados apenas do comunicado do ID 
 $sql = "SELECT * FROM comunicados WHERE id = $id";
 $resultado = mysqli_query($conexao, $sql);
 $comunicado = mysqli_fetch_assoc($resultado);

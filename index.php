@@ -16,9 +16,11 @@
         <?php
         include 'conexao.php';
 
+        //Criar e Executar consulta no SQL
         $sql = "SELECT id, titulo, conteudo, DATE_FORMAT(data_criacao, '%d/%m/%Y às %H:%i') as data_formatada FROM comunicados ORDER BY data_criacao DESC";
         $resultado = mysqli_query($conexao, $sql);
-
+  
+        //Verifica se há comunicados se houver exibe no WHILE
         if (mysqli_num_rows($resultado) > 0) {
             while ($comunicado = mysqli_fetch_assoc($resultado)) {
         ?>
