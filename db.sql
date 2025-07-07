@@ -4,3 +4,5 @@ CREATE TABLE comunicados (
     conteudo TEXT NOT NULL,
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+--Mostrando o código para criação da tabela
